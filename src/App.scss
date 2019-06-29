@@ -9,7 +9,7 @@ a {
 }
 
 .siteContent {
-  min-width: 1200px;
+  max-width: 800px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -18,6 +18,9 @@ a {
 .navigation {
   display: flex;
   justify-content: left;
+  position: sticky;
+  top: 0;
+  background-color: white
   
 }
 
@@ -28,14 +31,13 @@ a {
   align-items: center;
   border-bottom: 4px solid #efefef;
   height: 40px;
-  min-width: 200px;
+  padding: 0 20px
 
 }
 
 .selected {
   border-bottom: 4px solid #dedede;
   color: darkgrey
-  /* font-weight: 800; */
 }
 
 .routeContent {

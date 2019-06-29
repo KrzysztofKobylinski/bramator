@@ -1,12 +1,13 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
 import Main from './components/Main'
 import Ask from './components/Ask'
 import About from './components/About'
 import Contact from './components/Contact'
 import Service from './components/Service'
-
-import "./App.scss";
+import Scrollchor from 'react-scrollchor'
+import PageProgress from 'react-page-progress'
+import './App.scss'
 
 class App extends Component {
   render() {
@@ -14,44 +15,30 @@ class App extends Component {
       <div className="App">
         <Router>
           <div className="siteContent">
-            <div className="logo">
-              <img alt='' src="http://bramator.pl/wp-content/uploads/2017/08/logo3.png" />
-            </div>
+            <PageProgress color={'skyblue'} height={5} />
             <div className="navigation">
-              <NavLink
-                className="navButton"
-                activeClassName="selected"
-                exact
-                to="/"
-              >
+              <Scrollchor to="#top">
+                <div className="navLink">Top</div>
+              </Scrollchor>
+              <Scrollchor to="#middle">
+                <div className="navLink">Middle</div>
+              </Scrollchor>
+              <Scrollchor to="#bottom">
+                <div className="navLink">Bottom</div>
+              </Scrollchor>
+              <NavLink className="navButton" activeClassName="selected" exact to="/">
                 <div className="navLink">Strona Główna</div>
               </NavLink>
-              <NavLink
-                className="navButton"
-                activeClassName="selected"
-                to="/ask/"
-              >
+              <NavLink className="navButton" activeClassName="selected" to="/ask/">
                 <div className="navLink">Zapytanie ofertowe</div>
               </NavLink>
-              <NavLink
-                className="navButton"
-                activeClassName="selected"
-                to="/about/"
-              >
+              <NavLink className="navButton" activeClassName="selected" to="/about/">
                 <div className="navLink">O nas</div>
               </NavLink>
-              <NavLink
-                className="navButton"
-                activeClassName="selected"
-                to="/service/"
-              >
+              <NavLink className="navButton" activeClassName="selected" to="/service/">
                 <div className="navLink">Service</div>
               </NavLink>
-              <NavLink
-                className="navButton"
-                activeClassName="selected"
-                to="/contact/"
-              >
+              <NavLink className="navButton" activeClassName="selected" to="/contact/">
                 <div className="navLink">Kontakt</div>
               </NavLink>
             </div>
@@ -66,8 +53,8 @@ class App extends Component {
           </div>
         </Router>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

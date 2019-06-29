@@ -22,9 +22,12 @@ export default class Main extends Component {
     return (
       <div className="routeContent">
         <div>
-          <h2> Single Item</h2>
-          {_.map(new Array(20), (i) => this.renderLorem())}
-          
+          <h2 id="top"> Top</h2>
+          {_.map(new Array(20), i => this.renderLorem())}
+          <h2 id="middle"> Middle</h2>
+          {_.map(new Array(20), i => this.renderLorem())}
+          <h2 id="bottom"> Bottom</h2>
+          {_.map(new Array(20), i => this.renderLorem())}
         </div>
       </div>
     )
