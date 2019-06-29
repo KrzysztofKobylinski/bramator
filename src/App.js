@@ -6,7 +6,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Service from './components/Service'
 
-import "./App.css";
+import "./App.scss";
 
 class App extends Component {
   render() {
@@ -15,7 +15,7 @@ class App extends Component {
         <Router>
           <div className="siteContent">
             <div className="logo">
-              <img src="http://bramator.pl/wp-content/uploads/2017/08/logo3.png" />
+              <img alt='' src="http://bramator.pl/wp-content/uploads/2017/08/logo3.png" />
             </div>
             <div className="navigation">
               <NavLink
