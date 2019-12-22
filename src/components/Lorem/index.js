@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import _ from 'lodash'
-import './styles/slick.css'
+import './index.scss'
 
-import '../App.scss'
+const DEBUG = true
 
-export default class Main extends Component {
+export default class Lorem extends Component {
   renderLorem() {
     return (
       <p>
@@ -20,15 +20,17 @@ export default class Main extends Component {
   }
   render() {
     return (
-      <div className="routeContent">
-        <div>
-          <h2 id="top"> Top</h2>
-          {_.map(new Array(20), i => this.renderLorem())}
-          <h2 id="middle"> Middle</h2>
-          {_.map(new Array(20), i => this.renderLorem())}
-          <h2 id="bottom"> Bottom</h2>
-          {_.map(new Array(20), i => this.renderLorem())}
-        </div>
+      <div
+        className="lorem"
+        style={DEBUG ? {
+          borderStyle: 'solid',
+          borderWidth: '1px',
+          borderColor: 'red'
+        }: {}}
+      >
+        {_.map(new Array(this.props.count), (i, index) => (
+          <div key={index}>{this.renderLorem()}</div>
+        ))}
       </div>
     )
   }
