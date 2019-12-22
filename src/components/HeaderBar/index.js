@@ -13,9 +13,9 @@ export default class HeaderBar extends Component {
 
     return (
       <Sticky>
-        <div className="headerWrapper">
+        <div className="headerBarWrapper">
           <Narrow>
-            <div className="header">
+            <div className="headerBar">
               {logo}
               <div className="links">
                 {_.map(links, (link, index) => (

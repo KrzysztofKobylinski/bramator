@@ -1,11 +1,17 @@
 import React, { Component, Fragment } from 'react'
-import Lorem from '../../components/Lorem/'
-import Narrow from '../../components/Narrow/'
 
-import Column from '../../components/Column/'
-
-import HeaderBar from '../../components/HeaderBar/'
-import Footer from '../../components/Footer/'
+import { 
+	Column, 
+	Footer, 
+	Header, 
+	HeaderBar, 
+	Lorem,
+	Map, 
+	Narrow, 
+	SmallFont,
+	Image,
+	Paragraph
+} from '../../components/'
 
 
 export default class Main extends Component {
@@ -26,34 +32,49 @@ export default class Main extends Component {
           ]}
         />
 
-        <div>
-          <Lorem count={5} />
-        </div>
+        <Header>Nagłówek</Header>
+        <SmallFont>Malutki</SmallFont>
+        <Lorem count={5} />
+        <Column columns="20fr 6fr">
+          <Image src="https://images.unsplash.com/photo-1544612318-bcab56ed6311?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" />
+          <Lorem count={1} />
+        </Column>
         <Column>
           <Lorem count={5} />
-          <Lorem count={3} />
+
+						<Paragraph
+							header= 'Paragraph'
+							text={[
+								'sdasdasdasd'
+							,
+								'sdfsdfsdfsdfsdfsdf'
+							, 
+								'pofkdgopkfdpo'
+							]}
+						/>
+
         </Column>
+        <Image src="https://gamingsociety.pl/wp-content/uploads/2019/04/windows-xp.jpg" />
         <div id="random">
           <Narrow>
             <Lorem count={5} />
           </Narrow>
         </div>
         <div id="contact">
-          <Narrow>
-            <Column columns="5fr 6fr">
-              <Lorem count={5} />
-              <Lorem count={3} />
-            </Column>
-          </Narrow>
+          <Column columns="5fr 6fr">
+            <Lorem count={2} />
+            <Map />
+          </Column>
         </div>
+        <Lorem count={3} />
         <Footer
-					logo={<div>Superfirma</div>}
-					credits={true}
+          logo={<div>Superfirma</div>}
+          credits={true}
           links={[
             {
               name: 'Scroll to top',
               link: '#'
-            },
+            }
           ]}
         />
       </Fragment>
