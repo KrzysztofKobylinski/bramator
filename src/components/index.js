@@ -19,6 +19,17 @@ import Sticky from './Sticky/'
 
 import Paragraph from './Paragraph/'
 
+import Button from './Button/'
+
+import GridGallery from './GridGallery/'
+
+import Section from './Section/'
+
+import Center from './Center/'
+
+import Spacing from './Spacing/'
+
+
 export { 
   Column, 
   Footer, 
@@ -30,5 +41,10 @@ export {
   Narrow, 
   SmallFont, 
   Sticky ,
-  Paragraph
+  Paragraph,
+  Button,
+  GridGallery,
+  Section,
+  Center,
+  Spacing
 }

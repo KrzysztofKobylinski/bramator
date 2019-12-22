@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import _ from 'lodash'
 import './index.scss'
 
-const DEBUG = true
+const DEBUG = false
 
 export default class Lorem extends Component {
   renderLorem() {

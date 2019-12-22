@@ -8,7 +8,8 @@ export default class Column extends Component {
       <div 
         className='column'
         style={{
-          gridTemplateColumns: this.props.columns
+          gridTemplateColumns: this.props.columns,
+          gridGap: this.props.gap
         }}
       >
         {this.props.children}

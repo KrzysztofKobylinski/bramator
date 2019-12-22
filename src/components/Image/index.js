@@ -6,6 +6,7 @@ export default class Image extends Component {
     return (
       <div
         className='image'
+        onClick={this.props.onClick}
         style={{
           backgroundImage: `url(${this.props.src})`
         }}
