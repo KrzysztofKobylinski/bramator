@@ -1,46 +1,24 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from "react";
+import { SRLWrapper } from 'simple-react-lightbox'
 
-import Carousel, { Modal, ModalGateway } from 'react-images'
 
-import Column from '../Column/'
-import Image from '../Image/'
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
 
-export default class GridGallery extends Component {
-  state = {
-    selectedIndex: 0,
-    lightboxIsOpen: false
-  }
-  toggleLightbox = selectedIndex => {
-    this.setState(state => ({
-      lightboxIsOpen: !state.lightboxIsOpen,
-      selectedIndex
-    }))
-  }
+
+
+export default class Responsive extends Component {
   render() {
-    const { images, columns, gap } = this.props
-    const { selectedIndex, lightboxIsOpen } = this.state
-    console.log(columns)
-    console.log((1 / columns) * 100)
-
     return (
-      <Fragment>
-        <Column columns={columns} gap={gap}>
-          {images.map(({ author, caption, source }, j) => (
-              <div>
-
-                <Image src={source.thumbnail} onClick={() => this.toggleLightbox(j)} key={j} />
-              </div>
+      <SRLWrapper>
+        <GridList cellHeight={160} className={this.props.classes.gridList} cols={3}>
+          {this.props.grid.map((tile) => (
+            <GridListTile key={tile.img} cols={tile.cols || 1}>
+              <img src={tile.img} alt={tile.title} />
+            </GridListTile>
           ))}
-        </Column>
-
-        <ModalGateway>
-          {lightboxIsOpen ? (
-            <Modal onClose={this.toggleLightbox}>
-              <Carousel currentIndex={selectedIndex} frameProps={{ autoSize: 'height' }} views={images} />
-            </Modal>
-          ) : null}
-        </ModalGateway>
-      </Fragment>
-    )
+        </GridList>
+      </SRLWrapper>
+    );
   }
 }
