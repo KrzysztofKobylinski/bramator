@@ -1,10 +1,3 @@
-import img1 from '../../assets/gallery/1.jpg';
-import img2 from '../../assets/gallery/2.jpg';
-import img3 from '../../assets/gallery/3.jpg';
-import img4 from '../../assets/gallery/4.jpg';
-import img5 from '../../assets/gallery/5.PNG';
-import img6 from '../../assets/gallery/6.jpg';
-import img7 from '../../assets/gallery/7.PNG';
 
 import brand1 from  '../../assets/brands/beninca.jpg';
 import brand2 from  '../../assets/brands/bft.png';
@@ -65,40 +58,6 @@ export const tiers = [
   },
 ];
 
-
-export const grid = [
-  {
-    img: img1,
-    title: 'Brama 1',
-  },
-  {
-    img: img2,
-    title: 'Brama 1',
-    cols: 2,
-  },
-  {
-    img: img3,
-    title: 'Brama 1',
-  },
-  {
-    img: img4,
-    title: 'Brama 1',
-  },
-  {
-    img: img5,
-    title: 'Brama 1',
-  },
-  {
-    img: img6,
-    title: 'Brama 1',
-    cols: 2,
-
-  },
-  {
-    img: img7,
-    title: 'Brama 1',
-  },
-]
 
 
 export const carousel = [

@@ -13,7 +13,7 @@ import Box from '@material-ui/core/Box';
 import Image from 'material-ui-image'
 
 import Styles from './styles';
-import { tiers, grid, carousel } from './data';
+import { tiers, carousel } from './data';
 
 import logo from '../../assets/logo.jpg';
 
