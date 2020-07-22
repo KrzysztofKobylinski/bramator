@@ -17,12 +17,15 @@ export default function FormDialog(props) {
   const handleClose = () => {
     setOpen(false);
   };
-  console.log(props)
+  console.log('AAAA', props)
   return (
     <> {
       props.buttonProps != null &&
       <>
-        <Button {...props.buttonProps} onClick={handleClickOpen}>
+        <Button 
+          {...props.buttonProps} 
+          // onClick={handleClickOpen}
+        >
           {props.buttonProps != null ? props.buttonProps.text : ''}
         </Button>
         <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">

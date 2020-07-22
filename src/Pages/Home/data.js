@@ -23,10 +23,15 @@ export const tiers = [
       'Oferujemy darmową wycenę w zakresie montażu bram garażowych.',
     ],
     buttonText: 'Skontaktuj się z doradcą',
-    buttonVariant: 'outlined',
-    form: true,
-    formHeader: 'Formularz - Doradztwo',
-    formDescription: 'Opis formularz doradca...Opis formularz doradca...Opis formularz doradca...Opis formularz doradca...Opis formularz doradca...Opis formularz doradca...'
+    buttonProps: {
+      fullWidth: true,
+      href: "#kontakt",
+      variant: 'outlined',
+      color: "primary"
+    },
+    // form: true,
+    // formHeader: 'Formularz - Doradztwo',
+    // formDescription: 'Opis formularz doradca...Opis formularz doradca...Opis formularz doradca...Opis formularz doradca...Opis formularz doradca...Opis formularz doradca...'
   },
   {
     title: 'Sklep internetowy',
@@ -35,8 +40,12 @@ export const tiers = [
       'Oferujemy sprzedaż internetową wszystkiego co potrzebne do naprawy, montażu i utrzymania bramy lub furtki.',
     ],
     buttonText: 'Przejdź do sklepu',
-    buttonVariant: 'contained',
-    buttonLink: 'https://sklep.bramator.pl'
+    buttonProps: {
+      fullWidth: true,
+      href: "https://sklep.bramator.pl",
+      variant: 'contained',
+      color: 'primary'
+    },
   },
   {
     title: 'Serwis',
@@ -44,12 +53,15 @@ export const tiers = [
       'Wykonujemy okresowe przeglądy oraz naprawy pogwarancyjne bram, furtek oraz napędów.',
     ],
     buttonText: 'Skontaktuj się z serwisem',
-    buttonVariant: 'outlined',
-    form: true,
-    formHeader: 'Formularz - Serwis',
-    formDescription: 'Opis formularz serwis.... Opis formularz serwis.... Opis formularz serwis.... Opis formularz serwis.... Opis formularz serwis.... Opis formularz serwis.... '
-
-
+    buttonProps: {
+      fullWidth: true,
+      href: "#kontakt",
+      variant: 'outlined',
+      color: "primary"
+    },
+    // form: true,
+    // formHeader: 'Formularz - Serwis',
+    // formDescription: 'Opis formularz serwis.... Opis formularz serwis.... Opis formularz serwis.... Opis formularz serwis.... Opis formularz serwis.... Opis formularz serwis.... '
   },
 ];
 

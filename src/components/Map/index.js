@@ -17,8 +17,8 @@ const lines = [
 
 const hours = [
   'Godziny otwarcia:',
-  '8:00 - 16:00 Pon-Ptk',
-  '8:00 - 160:00 Sob',
+  'Pon-Pt: 8:00 - 16:00',
+  'Sob: 8:00 - 16:00',
 ]
 
 const link = 'www.google.com/maps/search/?api=1&query=Bramator'
@@ -78,7 +78,7 @@ export default class Map extends Component {
                   <Button
                     fullWidth
                     href="tel:227508678"
-                    variant='outlined'
+                    variant='contained'
                     color="primary"
                   >
                     Zadzwoń: (22)750-86-78
@@ -90,11 +90,11 @@ export default class Map extends Component {
                 <div className={this.props.classes.cardButton}>
                   <Button
                     fullWidth
-                    href='mailto:kontakt@bramator.pl'
+                    href='mailto:bramator@bramator.pl'
                     variant='outlined'
                     color="primary"
                   >
-                    kontakt@bramator.pl
+                    bramator@bramator.pl
                 </Button>
 
 

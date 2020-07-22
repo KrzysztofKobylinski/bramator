@@ -75,44 +75,16 @@ export default function Pricing() {
                   </ul>
                 </CardContent>
                 <CardActions>
-                  {tier.form &&
-                    <Form
-                      classes={classes}
-                      buttonProps={{
-                        fullWidth: true,
-                        variant: tier.buttonVariant,
-                        color: 'primary',
-                        text: tier.buttonText,
-                      }}
-                      tier={tier}
-
-                    />
-                  }
-                  {!tier.form &&
-                    <Button href={tier.buttonLink}
-                      fullWidth variant={tier.buttonVariant} color="primary">
-                      {tier.buttonText}
-                    </Button>
-
-                  }
+                  <Button 
+                    {...tier.buttonProps}
+                  >
+                    {tier.buttonText}
+                  </Button>
                 </CardActions>
               </Card>
             </Grid>
           ))}
         </Grid>
-      </Container>
-
-
-      <Container maxWidth="md" component="footer" className={classes.footer}>
-        <Box mt={5}>
-          <Typography variant="h5" align="center" paragraph>
-            Nasze realizacje:
-        </Typography>
-          <GridGallery
-            classes={classes}
-            grid={grid}
-          />
-        </Box>
       </Container>
 
       <Container maxWidth="md" component="footer" className={classes.footer}>

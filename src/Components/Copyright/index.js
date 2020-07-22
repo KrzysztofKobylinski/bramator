@@ -9,7 +9,7 @@ export default function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {/* <Link color="inherit" href="https://material-ui.com/"> */}
-        Made with ❤️, Krzysztof Kobyliński
+        Made with ❤️ by Krzysztof Kobyliński
       {/* </Link> */}
     </Typography>
   );
